@@ -8,6 +8,7 @@ def passGen(length):
     symbols = '~!@#$%^&*()-_=+./<>'
     all = lower + upper + digits + symbols
     return "".join(random.sample(all, length))
+
 length = int(input("Character length (n <= 81) : "))
 
 print(passGen(length))
