@@ -1,3 +1,3 @@
 password generator.
 
-Make the length of the character less than or equal to 94.
+Make the length of the character less than or equal to 81.
