@@ -1,14 +1,11 @@
-import random
-import string
+from random import randint
+from string import ascii_uppercase,ascii_lowercase,digits
 
-def passGen(length):
-    lower = string.ascii_lowercase
-    upper = string.ascii_uppercase
-    digits = string.digits
-    symbols = '~!@#$%^&*()-_=+./<>'
-    all = lower + upper + digits + symbols
-    return "".join(random.sample(all, length))
-
-length = int(input("Character length (n <= 81) : "))
-
-print(passGen(length))
+def passGen(pass_length):
+    password = ''
+    all_char = ascii_uppercase + ascii_lowercase + digits + '~!@#$%^&*()-_=+./<>'
+    for length in range(pass_length):
+        password += all_char[randint(0 , len(all_char) - 1)]
+    return password
+pass_length = int(input("Character length : "))
+print(passGen(pass_length))
